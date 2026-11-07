@@ -25,3 +25,4 @@ Icon
 
 # Directories potential created by macOS apps
 __MACOSX/
+.DS_Store
