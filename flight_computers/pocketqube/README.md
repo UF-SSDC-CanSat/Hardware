@@ -8,3 +8,4 @@ This folder will contain the KiCAD project for the PocketQube. The following sen
 5. Magnetometer: **BMM350**
 6. GPS Module: TBD
 7. Servo: **SG90** (x2)
+8. Black Blox: **MicroSD Reader**

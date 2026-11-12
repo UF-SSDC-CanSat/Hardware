@@ -5,3 +5,4 @@ This folder will contain the KiCAD project for the Container. The following sens
 2. Temperature / Barometer Sensor: **BMP581**
 3. Current and Voltage Monitor: **BQ28Z610**
 4. Servo: **SG90**
+5. Black Box: **MicroSD Reader**
