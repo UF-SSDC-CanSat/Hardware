@@ -1,0 +1,28 @@
+*.lck
+*.kicad_prl
+test/.history/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two carriage returns
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disks / network shares
+.Spotlight-V100
+.Trashes
+.fseventsd
+.DocumentRevisions-V100
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.apdisk
+
+# Directories potential created by macOS apps
+__MACOSX/
+.DS_Store
