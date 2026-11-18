@@ -714,6 +714,145 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:+3V3"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+3V3"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+3V3\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+3V3_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3V3_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:GND"
 			(power global)
 			(pin_numbers
@@ -1136,6 +1275,146 @@
 		)
 		(uuid "6452bc6c-ae82-418a-88f8-3e16ef74e284")
 	)
+	(text_box "What voltages are these? VDD/VCC/VDDIO are all for your reference. You need to actually describe what voltage (3V3 or 5V) is going into these ICs for a proper review to happen. - Joel\nRemember that in breakout boards, it clarifies this with 5V input pin for example. You can use the data sheet to figure this out. - Sarah"
+		(exclude_from_sim no)
+		(at 49.53 13.9343 0)
+		(size 46.228 21.1177)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "07ce5577-53aa-482a-9f88-f603a5f356b4")
+	)
+	(text_box "Why are the I2C lines just tied to voltage? How are you getting the signal away from the BMM?\nAre you trying to use pull-up resistors or line impedence resistors here?\nI suggest you look into I2C works before re-working this schematic.\nSame with the INT pin, the image has the VDDIO pull up as DNP (Do Not Place), so how are you getting the signal out?\n- Joel\n"
+		(exclude_from_sim no)
+		(at 206.756 46.482 0)
+		(size 43.18 25.146)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "16e1daca-434d-4524-a0ba-4549371062fc")
+	)
+	(text_box "This isn't wrong, but try to stay consistent accross the *entire* team of using international or US symbols for comoponents. International Caps will just have 2 bars for non-electrolytic caps and a curved bar for electrolytic caps.\nI recommend using the international for the Caps and US for resistors. \"C\" and \"R_US\" respectively.\n- Joel"
+		(exclude_from_sim no)
+		(at 36.576 45.212 0)
+		(size 35.56 28.4838)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "34aa9633-e55f-42d2-bd38-408f3366993b")
+	)
+	(text_box "These are pull-up resistors. On a PCB this will be close to a uC. - Joel"
+		(exclude_from_sim no)
+		(at 90.932 127.8146 0)
+		(size 18.288 14.1714)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "9e8fddd8-2716-4464-9bf6-d3305137d82f")
+	)
+	(text_box "<- These pins allows for higher level schematics (like the PCB) to be able to input things into this schematic. You'll see this in Digital Logic more but for now, you can press \"H\", give it a name and then connect schematic specific names afterwards and power flags - Sarah"
+		(exclude_from_sim no)
+		(at 51.308 97.028 0)
+		(size 33.274 22.35)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "a3dfa7d0-33ce-4224-bac4-f28acd17ed66")
+	)
+	(text_box "Also, stay consistent. VCC or VDD for everything, not both.\n- Joel\n"
+		(exclude_from_sim no)
+		(at 108.712 30.5704 0)
+		(size 31.496 8.0376)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "c55c4d7a-06e6-45f0-96b0-0f6d9a9de08d")
+	)
+	(text_box "Double check what this pin does, I see the image ties it to a GPIO with just a pull down resistor instead of just GND.\n- Joel"
+		(exclude_from_sim no)
+		(at 152.4 62.484 0)
+		(size 24.13 16.2161)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "f854134e-5b41-454e-bb5d-691b4d3b6860")
+	)
 	(junction
 		(at 101.6 46.99)
 		(diameter 0)
@@ -1155,10 +1434,16 @@
 		(uuid "2fd5a1c4-1f77-4ebc-a3df-08565f5118a9")
 	)
 	(junction
-		(at 87.63 45.72)
+		(at 87.63 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "950d8787-4a42-4dea-85f2-efa12d53536d")
+		(uuid "3e4fdff1-067f-4601-9a4d-312d0719e954")
+	)
+	(junction
+		(at 35.56 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4774f6a1-1ffc-42a6-8a4a-0369224a7c66")
 	)
 	(junction
 		(at 87.63 49.53)
@@ -1264,6 +1549,16 @@
 	)
 	(wire
 		(pts
+			(xy 87.63 46.99) (xy 87.63 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "56606125-e0d5-4c71-a131-5f091a235618")
+	)
+	(wire
+		(pts
 			(xy 114.3 52.07) (xy 114.3 55.88)
 		)
 		(stroke
@@ -1304,7 +1599,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 43.18) (xy 87.63 49.53)
+			(xy 87.63 43.18) (xy 87.63 46.99)
 		)
 		(stroke
 			(width 0)
@@ -1331,6 +1626,16 @@
 			(type default)
 		)
 		(uuid "9d77d402-0113-4101-a203-d3cedaa743ce")
+	)
+	(wire
+		(pts
+			(xy 31.75 100.33) (xy 35.56 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a26faa6a-71ce-4d49-a7ac-8b8295f743c3")
 	)
 	(wire
 		(pts
@@ -1374,6 +1679,16 @@
 	)
 	(wire
 		(pts
+			(xy 35.56 99.06) (xy 35.56 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5f50b67-6b76-4892-8378-78c55fb4cd6e")
+	)
+	(wire
+		(pts
 			(xy 176.53 40.64) (xy 173.99 40.64)
 		)
 		(stroke
@@ -1381,6 +1696,16 @@
 			(type default)
 		)
 		(uuid "dcdc430b-8a53-4416-a72b-612c9d9966c1")
+	)
+	(wire
+		(pts
+			(xy 35.56 97.79) (xy 35.56 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e55ca875-2317-456c-8d62-9b0bf038efdf")
 	)
 	(wire
 		(pts
@@ -5542,6 +5867,17 @@
 			"n5+enoZklSjaCAgICAgICAgICAh+Kfw/fyFeV/js7O4AAAAASUVORK5CYII="
 		)
 	)
+	(hierarchical_label "3V3"
+		(shape input)
+		(at 31.75 100.33 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "13f91cab-1cd5-4920-a2ad-910a0d36f2d4")
+	)
 	(symbol
 		(lib_id "power:VCC")
 		(at 101.6 39.37 0)
@@ -5614,6 +5950,10 @@
 		(instances
 			(project "pocketqube_PCB"
 				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee"
+					(reference "#PWR03")
+					(unit 1)
+				)
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
 					(reference "#PWR03")
 					(unit 1)
 				)
@@ -5694,6 +6034,167 @@
 			(project "pocketqube_PCB"
 				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee"
 					(reference "#PWR07")
+					(unit 1)
+				)
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 35.56 97.79 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0b7c5707-3771-44eb-aa28-da7449b8ee2a")
+		(property "Reference" "#PWR011"
+			(at 35.56 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 35.56 92.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 35.56 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 35.56 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 35.56 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c1b878fe-b1b9-4c01-ab4c-d737a5a0566d")
+		)
+		(instances
+			(project "pocketqube_PCB"
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 87.63 46.99 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1268ba41-1a4f-490e-b3eb-bdcebe3a34ec")
+		(property "Reference" "#FLG04"
+			(at 85.725 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 83.82 46.9899 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm"
+			(at 87.63 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 87.63 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 87.63 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "de05f674-8f5b-47bd-86d6-7baccac0555e")
+		)
+		(instances
+			(project "pocketqube_PCB"
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
+					(reference "#FLG04")
 					(unit 1)
 				)
 			)
@@ -5778,6 +6279,10 @@
 					(reference "C2")
 					(unit 1)
 				)
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
+					(reference "C2")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -5792,7 +6297,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "38115af2-ea11-4b39-88ef-6aebff15f20e")
-		(property "Reference" "R3"
+		(property "Reference" "R2"
 			(at 189.23 54.61 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5857,83 +6362,8 @@
 					(reference "R3")
 					(unit 1)
 				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 87.63 45.72 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3d6e1d8d-9e8f-435b-9dd0-8f88be44d5db")
-		(property "Reference" "#FLG01"
-			(at 85.725 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 83.82 45.7199 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm"
-			(at 87.63 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 87.63 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 87.63 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "703cbbfe-4458-4ee8-b33f-307769f7f9be")
-		)
-		(instances
-			(project "pocketqube_PCB"
-				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee"
-					(reference "#FLG01")
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -6018,6 +6448,10 @@
 					(reference "C1")
 					(unit 1)
 				)
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
+					(reference "C1")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -6094,6 +6528,10 @@
 		(instances
 			(project "pocketqube_PCB"
 				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee"
+					(reference "#PWR010")
+					(unit 1)
+				)
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
 					(reference "#PWR010")
 					(unit 1)
 				)
@@ -6176,6 +6614,10 @@
 					(reference "#PWR09")
 					(unit 1)
 				)
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
+					(reference "#PWR09")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -6252,6 +6694,10 @@
 		(instances
 			(project "pocketqube_PCB"
 				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee"
+					(reference "#PWR08")
+					(unit 1)
+				)
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
 					(reference "#PWR08")
 					(unit 1)
 				)
@@ -6337,6 +6783,10 @@
 					(reference "C3")
 					(unit 1)
 				)
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
+					(reference "C3")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -6412,6 +6862,10 @@
 		(instances
 			(project "pocketqube_PCB"
 				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee"
+					(reference "#PWR05")
+					(unit 1)
+				)
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
 					(reference "#PWR05")
 					(unit 1)
 				)
@@ -6640,6 +7094,10 @@
 					(reference "U1")
 					(unit 1)
 				)
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
+					(reference "U1")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -6716,6 +7174,10 @@
 		(instances
 			(project "pocketqube_PCB"
 				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee"
+					(reference "#PWR06")
+					(unit 1)
+				)
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
 					(reference "#PWR06")
 					(unit 1)
 				)
@@ -6798,6 +7260,10 @@
 					(reference "#FLG03")
 					(unit 1)
 				)
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
+					(reference "#FLG03")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -6813,7 +7279,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b4aa996f-8988-4854-91fe-e99c814eda9a")
-		(property "Reference" "JP3"
+		(property "Reference" "JP1"
 			(at 170.18 34.29 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6876,6 +7342,10 @@
 			(project "pocketqube_PCB"
 				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee"
 					(reference "JP3")
+					(unit 1)
+				)
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
+					(reference "JP1")
 					(unit 1)
 				)
 			)
@@ -6953,6 +7423,10 @@
 		(instances
 			(project "pocketqube_PCB"
 				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee"
+					(reference "#PWR04")
+					(unit 1)
+				)
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
 					(reference "#PWR04")
 					(unit 1)
 				)
@@ -7034,6 +7508,89 @@
 					(reference "#PWR01")
 					(unit 1)
 				)
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 35.56 99.06 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "deef5274-dd44-42eb-ba18-93ca6f76bc78")
+		(property "Reference" "#FLG01"
+			(at 37.465 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 39.37 99.0599 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm"
+			(at 35.56 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 35.56 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 35.56 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7bff1aac-33c3-4788-a546-b7d5faf370a5")
+		)
+		(instances
+			(project "pocketqube_PCB"
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
+					(reference "#FLG01")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -7112,6 +7669,10 @@
 					(reference "#PWR02")
 					(unit 1)
 				)
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
+					(reference "#PWR02")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -7126,7 +7687,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ec435a62-2c74-47ce-acfa-33dabbfa5520")
-		(property "Reference" "R2"
+		(property "Reference" "R1"
 			(at 189.23 43.18 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7189,6 +7750,10 @@
 			(project "pocketqube_PCB"
 				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee"
 					(reference "R2")
+					(unit 1)
+				)
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -7270,13 +7835,11 @@
 					(reference "#FLG02")
 					(unit 1)
 				)
+				(path "/e79f44ce-ad25-4dad-9a50-a0d2c8e15aee/747ce25d-2842-402f-8ce5-548c19c05bed"
+					(reference "#FLG02")
+					(unit 1)
+				)
 			)
 		)
 	)
-	(sheet_instances
-		(path "/"
-			(page "1")
-		)
-	)
-	(embedded_fonts no)
 )

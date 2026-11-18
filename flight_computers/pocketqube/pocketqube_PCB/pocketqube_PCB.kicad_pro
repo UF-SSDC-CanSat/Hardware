@@ -661,13 +661,17 @@
         "uuid": "e79f44ce-ad25-4dad-9a50-a0d2c8e15aee"
       }
     ],
-    "used_designators": "#FLG1-3,#PWR1-10",
+    "used_designators": "R1-2,#FLG1-4,#PWR1-11,C1-3,JP1,U1",
     "variants": []
   },
   "sheets": [
     [
       "e79f44ce-ad25-4dad-9a50-a0d2c8e15aee",
       "pocketqube_PCB"
+    ],
+    [
+      "747ce25d-2842-402f-8ce5-548c19c05bed",
+      "BMM350"
     ]
   ],
   "text_variables": {},
